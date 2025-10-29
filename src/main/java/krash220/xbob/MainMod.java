@@ -187,7 +187,7 @@ public class MainMod {
 
     public void onAttack(float damage) {
         long now = System.currentTimeMillis();
-        boolean crit = damage > 1.0f;
+        boolean crit = damage > true;
 
         if (crit || this.isCrit && now > this.attackAnim + CRIT_ANIM_LEN || !this.isCrit) {
             this.attackDamage = Math.min(1.0f, damage);
